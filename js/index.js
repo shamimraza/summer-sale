@@ -1,14 +1,117 @@
-function checkAndEnable() {
-    // Simulating the condition SELL200
-    var conditionMet = true;  // Set to true for demonstration purposes
+let serial =1;
+let total = 0;
+function handleClick(target){
+    const itemContainer = document.getElementById("name");
+    const itemName = target.parentNode.childNodes[3].childNodes[3].childNodes[3].innerText;
+    const h1 = document.createElement("h1")
+    h1.innerText =  `
+    ${serial}. ${itemName}
+    `;
+    itemContainer.appendChild(h1)
+    serial++;
+    const price = target.parentNode.childNodes[3].childNodes[3].childNodes[5].innerText.split(" ")[0];
+    total = parseInt(total) + parseInt(price);
+    document.getElementById('total-price').innerText =total;
+}
+
+function handleClickArea(target){
+    const itemContainer = document.getElementById("name");
+    const itemName= target.parentNode.childNodes[7].childNodes[3].childNodes[3].innerText;
+    const h1 = document.createElement("h1")
+    h1.innerText = `
+        ${serial}. ${itemName}
+    `;
+    itemContainer.appendChild(h1)
+    serial++;
+    const price = target.parentNode.childNodes[7].childNodes[3].childNodes[5].innerText.split(" ")[0];
+    total = parseInt(total) + parseInt(price);
+    document.getElementById('total-price').innerText =total;
+}
+
+function handleClickSite(target){
+    const itemContainer = document.getElementById("name");
+    const itemName= target.parentNode.childNodes[11].childNodes[3].childNodes[3].innerText;
+    const h1 = document.createElement("h1")
+    h1.innerText = `
+        ${serial}. ${itemName}
+    `;
+    itemContainer.appendChild(h1)
+    serial++;
+    const price = target.parentNode.childNodes[11].childNodes[3].childNodes[5].innerText.split(" ")[0];
+    total = parseInt(total) + parseInt(price);
+    document.getElementById('total-price').innerText =total;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function checkAndEnable() {
+//     // Simulating the condition SELL200
+//     var conditionMet = true;  // Set to true for demonstration purposes
   
-    if (conditionMet) {
-      var button = document.getElementById("sellButton");
-      button.disabled = true;  // Disable the button
+//     if (conditionMet) {
+//       var button = document.getElementById("sellButton");
+//       button.disabled = true;  // Disable the button
   
-      setTimeout(function() {
-        button.disabled = false;  // Enable the button again after a delay
-        alert("Button is enabled again!");
-      }, 3000);  // Delay in milliseconds (3 seconds in this case)
-    }
-  }
+//       setTimeout(function() {
+//         button.disabled = false;  // Enable the button again after a delay
+//         alert("Button is enabled again!");
+//       }, 3000);  // Delay in milliseconds (3 seconds in this case)
+//     }
+//   }
