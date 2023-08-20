@@ -12,6 +12,7 @@ function handleClick(target){
     const price = target.parentNode.childNodes[3].childNodes[3].childNodes[5].innerText.split(" ")[0];
     total = parseInt(total) + parseInt(price);
     document.getElementById('total-price').innerText =total;
+    
 }
 
 function handleClickArea(target){
@@ -26,6 +27,8 @@ function handleClickArea(target){
     const price = target.parentNode.childNodes[7].childNodes[3].childNodes[5].innerText.split(" ")[0];
     total = parseInt(total) + parseInt(price);
     document.getElementById('total-price').innerText =total;
+   
+    
 }
 
 function handleClickSite(target){
@@ -40,7 +43,37 @@ function handleClickSite(target){
     const price = target.parentNode.childNodes[11].childNodes[3].childNodes[5].innerText.split(" ")[0];
     total = parseInt(total) + parseInt(price);
     document.getElementById('total-price').innerText =total;
+
+    // const idValue = document.getElementById('total-price');
+    // const is = idValue.innerText;
+    // const isNumber = parseInt(is);
+    const button = document.getElementById('make'); 
+
+    if (total > 0) {
+    button.removeAttribute('disabled');
+    }
+    const applyBtn = document.getElementById('apply-btn');
+    if(total> 200){
+        applyBtn.removeAttribute('disabled');
+    }
+
 }
+
+function couponHandle(){
+    const inputField = document.getElementById('input-field');
+    if(inputField.value == 'SELL200'){
+        inputField.value= '';
+        const discount = (total * 0.2).toFixed(2);
+        const discountValue = document.getElementById('discount-value');
+        discountValue.innerText= discount;
+        const totalAmount = total - discount;
+        const totalAmountCard = document.getElementById('total-value');
+        totalAmountCard.innerText =totalAmount;
+    }else{
+        alert('Please Provide a valid Coupon Code')
+    }
+}
+
 
 
 

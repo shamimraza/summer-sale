@@ -48,7 +48,7 @@
                                     <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                 </div>
                                 <h2 class="card-title text-lg font-semibold">K. Accessories</h2>
-                                <p class="text-[#11111180]">39.00 TK</p>
+                                <p class="text-[#11111180]">96<span>.00</span> 00TK</p>
                             </div>
                         </div>
                         <!-- card-2 -->
@@ -66,7 +66,7 @@
                                     <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                 </div>
                                 <h2 class="card-title text-lg font-semibold">K. Stableman</h2>
-                                <p class="text-[#11111180]">25.00 TK</p>
+                                <p class="text-[#11111180]">125.00 TK</p>
                             </div>
                         </div>
                         <!-- card-3 -->
@@ -208,12 +208,12 @@
                     </div>
                 </div>
             </div>
-            <div class="sm:w-[100px] md:w-[650px] sm:mb-10 bg-[#FFF] h-[130px]  flex-1 mt-20 lg:ml-4">
+            <div class="sm:w-[100px] md:w-[650px] lg:w-[900px] sm:mb-10 bg-[#FFF] h-[130px]  flex-1 mt-20 lg:ml-4">
                 <h3 class="pl-3 py-4 text-2xl">Have coupon?</h3>
                 <div class="flex">
-                    <input class="text-lg border ml-3 w-40 rounded-l pl-2 text-[#11111180] " placeholder="Coupon code"
-                        type="text" name="" id="">
-                    <button class="rounded-r text-white p-2 bg-[#E527B2] ">Apply</button>
+                    <input class="text-lg border ml-3 w-40 rounded-l pl-2 text-[#11111180]" placeholder="Coupon code"
+                        type="text" name="" id="input-field">
+                    <button onclick="couponHandle()" id="apply-btn" class="rounded-r text-white p-2 bg-[#E527B2]" disabled>Apply</button>
                 </div>
                 <div class="mt-10">
                     <div id="name" class="bg-[#FFF] text-lg font-semibold pl-7">
@@ -224,14 +224,25 @@
                     </div>
                     <div class="space-y-2 bg-[#FFF] pl-5 h-[170px] py-6 rounded">
                         <h1 class="text-lg font-semibold">Total price <span id="total-price"
-                                class="text-[#11111180]">00</span> Tk</h1>
+                                class="text-[#11111180]">00</span>.00 Tk</h1>
                         <h1 class="text-lg font-semibold">Discount: <span id="discount-value"
                                 class="text-gray-600">00</span> TK</h1>
                         <h2 class="text-lg font-semibold">Total: <span id="total-value">00</span> Tk</h2>
                         <div class="w-60 mx-auto">
                             <hr>
                         </div>
-                        <button class="btn bg-[#E527B2] flex mx-auto text-white">Make Purchase</button>
+                        <button id="make" class="btn bg-[#E527B2] flex mx-auto text-white"
+                            onclick="my_modal_8.showModal()" disabled>Make Purchase</button>
+                        <dialog id="my_modal_8" class="modal modal-bottom sm:modal-middle">
+                            <form method="dialog" class="modal-box">
+                                <div class="flex justify-center items-center"><img src="./images/congo.png" alt="">
+                                </div>
+                                <p class="text-center mt-2">You Purchase the product</p>
+                                <div class="modal-action items-center text-center justify-center flex">
+                                    <button class="btn bg-[#E527B2] text-white">Go Home</button>
+                                </div>
+                            </form>
+                        </dialog>
                     </div>
                 </div>
             </div>
