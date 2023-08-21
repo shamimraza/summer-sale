@@ -12,6 +12,15 @@ function handleClick(target){
     const price = target.parentNode.childNodes[3].childNodes[3].childNodes[5].innerText.split(" ")[0];
     total = parseInt(total) + parseInt(price);
     document.getElementById('total-price').innerText =total;
+    const button = document.getElementById('make'); 
+
+    if (total > 0) {
+    button.removeAttribute('disabled');
+    }
+    const applyBtn = document.getElementById('apply-btn');
+    if(total> 200){
+        applyBtn.removeAttribute('disabled');
+    }
     
 }
 
@@ -27,7 +36,15 @@ function handleClickArea(target){
     const price = target.parentNode.childNodes[7].childNodes[3].childNodes[5].innerText.split(" ")[0];
     total = parseInt(total) + parseInt(price);
     document.getElementById('total-price').innerText =total;
-   
+    const button = document.getElementById('make'); 
+
+    if (total > 0) {
+    button.removeAttribute('disabled');
+    }
+    const applyBtn = document.getElementById('apply-btn');
+    if(total> 200){
+        applyBtn.removeAttribute('disabled');
+    }
     
 }
 
