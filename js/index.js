@@ -12,8 +12,8 @@ function handleClick(target){
     const price = target.parentNode.childNodes[3].childNodes[3].childNodes[5].innerText.split(" ")[0];
     total = parseInt(total) + parseInt(price);
     document.getElementById('total-price').innerText =total;
-    const button = document.getElementById('make'); 
 
+    const button = document.getElementById('make'); 
     if (total > 0) {
     button.removeAttribute('disabled');
     }
@@ -36,8 +36,8 @@ function handleClickArea(target){
     const price = target.parentNode.childNodes[7].childNodes[3].childNodes[5].innerText.split(" ")[0];
     total = parseInt(total) + parseInt(price);
     document.getElementById('total-price').innerText =total;
-    const button = document.getElementById('make'); 
 
+    const button = document.getElementById('make'); 
     if (total > 0) {
     button.removeAttribute('disabled');
     }
@@ -61,11 +61,7 @@ function handleClickSite(target){
     total = parseInt(total) + parseInt(price);
     document.getElementById('total-price').innerText =total;
 
-    // const idValue = document.getElementById('total-price');
-    // const is = idValue.innerText;
-    // const isNumber = parseInt(is);
     const button = document.getElementById('make'); 
-
     if (total > 0) {
     button.removeAttribute('disabled');
     }
